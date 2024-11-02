@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+  <circle style="fill:#F0F0F0;" cx="256" cy="256" r="256"/>
+  <g>
+    <!-- Top Blue Section -->
+    <path style="fill:#0052B4;" d="M0 160h512v85.333H0z"/>
+    <!-- Middle White Section -->
+    <path style="fill:#FFFFFF;" d="M0 245.333h512v85.333H0z"/>
+    <!-- Bottom Green Section -->
+    <path style="fill:#6DA544;" d="M0 330.667h512V416H0z"/>
+    <!-- Red Divider Lines -->
+    <path style="fill:#D80027;" d="M0 245.333h512v10.667H0z"/>
+    <path style="fill:#D80027;" d="M0 330.667h512v10.667H0z"/>
+  </g>
+  <!-- Crescent and Stars -->
+  <g>
+    <!-- Crescent Moon -->
+    <path style="fill:#FFFFFF;" d="M102.4 110.933c17.067 0 32.533 6.4 44.8 17.067-6.4-17.067-25.6-29.867-48-29.867-27.733 0-50.133 22.4-50.133 50.133s22.4 50.133 50.133 50.133c22.4 0 41.6-12.8 48-29.867-12.8 10.667-28.8 17.067-44.8 17.067-38.4 0-69.333-30.933-69.333-69.333s30.933-69.333 69.333-69.333z"/>
+    <!-- 5 Stars -->
+    <circle cx="174.933" cy="86.4" r="6.4" style="fill:#FFFFFF;"/>
+    <circle cx="174.933" cy="115.2" r="6.4" style="fill:#FFFFFF;"/>
+    <circle cx="191.733" cy="101.867" r="6.4" style="fill:#FFFFFF;"/>
+    <circle cx="158.133" cy="101.867" r="6.4" style="fill:#FFFFFF;"/>
+    <circle cx="174.933" cy="144" r="6.4" style="fill:#FFFFFF;"/>
+  </g>
+</svg>
