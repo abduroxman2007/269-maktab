@@ -7,20 +7,18 @@ import { Styles } from "../styles/styles";
 
 const Router = () => {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<div>Loading...</div>}> {/* Fallback UI for lazy-loaded routes */}
       <Styles />
       <Header />
       <Switch>
-        {routes.map((routeItem) => {
-          return (
-            <Route
-              key={routeItem.component}
-              path={routeItem.path}
-              exact={routeItem.exact}
-              component={lazy(() => import(`../pages/${routeItem.component}`))}
-            />
-          );
-        })}
+        {routes.map((routeItem) => (
+          <Route
+            key={routeItem.path}
+            path={routeItem.path}
+            exact={routeItem.exact}
+            component={lazy(() => import(`../pages/${routeItem.component}`))}
+          />
+        ))}
       </Switch>
       <Footer />
     </Suspense>
