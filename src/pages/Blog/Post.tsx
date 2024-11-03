@@ -1,22 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 interface PostProps {
   post: {
-    id: number; // Replace with your actual ID type
+    id: number;
+    image: string;
     title: string;
-    content: string; // Assuming your API provides these fields
-    // Add any other fields your post object contains
+    description: string;
   };
 }
 
 const Post: React.FC<PostProps> = ({ post }) => {
   return (
-    <div className="post">
-      <h2>
-        <Link to={`/posts/${post.id}`}>{post.title}</Link> {/* Link to the detailed view */}
-      </h2>
-      <p>{post.content.substring(0, 100)}...</p> {/* Show only a snippet of the content */}
+    <div className="post-card">
+      <img src={post.image} alt={post.title} className="post-image" />
+      <h2 className="post-title">{post.title}</h2>
+      <p className="post-description">{post.description}</p>
+      <div className="read-more-container">
+            <a href={`/blog/${post.id}`} className="read-more">Read More</a> {/* Ensure this is included */}
+      </div>
     </div>
   );
 };

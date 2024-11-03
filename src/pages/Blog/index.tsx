@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post'; // Adjust this line
+import './style.css'; // Ensure this is the correct path to your CSS file
 
 const BlogIndex: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]); // Replace 'any' with your post type
@@ -26,18 +27,18 @@ const BlogIndex: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>; // Add a class for loading
   }
 
   if (error) {
-    return <div>Error fetching posts: {error}</div>;
+    return <div className="error">Error fetching posts: {error}</div>; // Add a class for error messages
   }
 
   return (
-    <div>
-      <h1>Blog Posts</h1>
+    <div className="post-container"> {/* Add class for the container */}
+      <h1 className="blog-title">Blog Posts</h1> {/* Class for title */}
       {posts.length === 0 ? (
-        <p>No posts available.</p>
+        <p className="no-posts">No posts available.</p> // Class for no posts
       ) : (
         posts.map((post) => (
           <Post key={post.id} post={post} /> // Assuming each post has a unique ID

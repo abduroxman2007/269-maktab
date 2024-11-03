@@ -1,4 +1,73 @@
-/* Placeholder style */
-body {
-    background-color: transparent;
+/* Blog/styles.css */
+
+/* Container for all posts */
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between posts */
+  padding: 20px;
+}
+
+/* Individual post card */
+.post-card {
+  overflow: hidden; /* To ensure images fit within the card */
+  background-color: rgb(253, 253, 253);
+  border-radius: 8px;
+  margin: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+/* Hover effect */
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image styling */
+.post-image {
+  width: 100%; /* Full width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Cover to maintain aspect ratio */
+}
+
+/* Title styling */
+.post-title {
+  font-size: 1.5rem; /* Bigger font size */
+  margin: 10px; /* Margin for spacing */
+}
+
+/* Description text */
+.post-description {
+  font-size: 1rem; /* Regular font size */
+  margin: 0 10px 10px; /* Margins for spacing */
+  height: 100%;
+  overflow: hidden; 
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; /* Vertical orientation */
+  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  position: relative; 
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5; /* Limit to 5 lines */
+}
+
+/* Text Link for Read More */
+.read-more {
+  color: darkblue;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block; /* Make it an inline-block element */
+  margin: 10px; /* Add some margin */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.read-more-container { /* New container for the link */
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
 }

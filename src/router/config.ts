@@ -16,9 +16,8 @@ const routes = [
     component: "Blog", // The main Blog page with a list of posts
   },
   {
-    path: "/blog/:postId",
-    exact: true,
-    component: "Blog/PostDetails", // The detail view for a single post
+    path: '/blog/:id', // Ensure this path matches how you're linking to the details page
+    component: 'Blog/PostDetails', // Adjust based on your file structure
   },
   {
     path: "/contact",

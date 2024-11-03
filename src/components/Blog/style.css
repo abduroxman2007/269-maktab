@@ -6,22 +6,24 @@
   }
   
   .blog-title {
-    font-size: 2em;
+    font-size: 47px;
     margin-bottom: 10px;
   }
   
   .blog-description {
-    font-size: 1.2em;
+    font-size: 21px;
     margin-bottom: 30px;
   }
   
   .blog-posts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between posts */
+    padding: 20px;
   }
   
   .blog-card {
+    overflow: hidden; /* To ensure images fit within the card */
     background-color: rgb(253, 253, 253);
     border-radius: 8px;
     margin: 15px;
@@ -36,9 +38,9 @@
   }
   
   .blog-image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover to maintain aspect ratio */
   }
   
   .blog-content {
@@ -46,12 +48,19 @@
   }
   
   .blog-post-title {
-    font-size: 1.5em;
-    margin: 10px 0;
+    font-size: 1.5rem; /* Bigger font size */
+    margin: 10px; /* Margin for spacing */
   }
   
   .blog-snippet {
-    margin: 10px 0;
+    font-size: 1rem; /* Regular font size */
+    margin: 0 10px 10px; /* Margins for spacing */
+    height: 100%; 
+    overflow: hidden; 
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; /* Vertical orientation */
+    -webkit-line-clamp: 5; /* Limit to 5 lines */
+    position: relative; 
   }
   
   .read-more {
