@@ -27,24 +27,27 @@ const BlogIndex: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div className="loading">Loading...</div>; // Add a class for loading
+    return <div className="loading" style={{fontSize: "50px", textAlign: "center", color: "darkblue", fontWeight: "bold"}}>Loading...</div>; // Add a class for loading
   }
 
   if (error) {
-    return <div className="error">Error fetching posts: {error}</div>; // Add a class for error messages
+    return <div className="error" style={{fontSize: "50px", textAlign: "center", color: "red", fontWeight: "bold"}}>Error fetching posts: {error}</div>; // Add a class for error messages
   }
 
   return (
-    <div className="post-container"> {/* Add class for the container */}
-      <h1 className="blog-title">Blog Posts</h1> {/* Class for title */}
-      {posts.length === 0 ? (
-        <p className="no-posts">No posts available.</p> // Class for no posts
-      ) : (
-        posts.map((post) => (
-          <Post key={post.id} post={post} /> // Assuming each post has a unique ID
-        ))
-      )}
-    </div>
+    <>
+      <h1 className="blog-title" style={{textAlign: "center"}}>Yangiliklar</h1> {/* Class for title */}
+      <div className="post-container"> {/* Add class for the container */}
+
+        {posts.length === 0 ? (
+          <p className="no-posts">No posts available.</p> // Class for no posts
+        ) : (
+          posts.map((post) => (
+            <Post key={post.id} post={post} /> // Assuming each post has a unique ID
+          ))
+        )}
+      </div>
+    </>
   );
 };
 

@@ -25,21 +25,23 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const MenuItem = () => {
     const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
+      // const element = document.getElementById(id) as HTMLDivElement;
+      // element.scrollIntoView({
+      //   behavior: "smooth",
+      // });
+      window.location.href = `${id}`;
+      
       setVisibility(false);
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("/")}>
           <Span>{t("Bosh sahifa")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("/about")}>
           <Span>{t("Biz haqimizda")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("/blog")}>
           <Span>{t("Yangiliklar")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall

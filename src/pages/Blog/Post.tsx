@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './style.css'
 interface PostProps {
   post: {
     id: number;
@@ -11,14 +11,16 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ post }) => {
   return (
-    <div className="post-card">
-      <img src={post.image} alt={post.title} className="post-image" />
-      <h2 className="post-title">{post.title}</h2>
-      <p className="post-description">{post.description}</p>
-      <div className="read-more-container">
-            <a href={`/blog/${post.id}`} className="read-more">Read More</a> {/* Ensure this is included */}
+    <div className="blog-posts">
+            <div className="blog-card" key={post.id}>
+              <img src={post.image} alt={post.title} className="blog-image" />
+              <div className="blog-content">
+                <h3 className="blog-post-title">{post.title}</h3>
+                <p className="blog-snippet">{post.description}</p>
+                <a href={`/blog/${post.id}`} className="read-more">Read More</a>
+              </div>
+            </div>
       </div>
-    </div>
   );
 };
 

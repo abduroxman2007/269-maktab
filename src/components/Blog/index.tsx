@@ -42,7 +42,7 @@ const Blog: React.FC = () => {
           <p>No posts available</p> // Display if no posts are retrieved
         )}
       </div>
-      <button className="load-more">Load More</button>
+      <button className="load-more"> <a href='/blog' style={{fontStyle: "none", color: "white"}}>Load More</a></button>
     </div>
   );
 };

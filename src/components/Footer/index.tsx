@@ -31,17 +31,17 @@ const Footer = ({ t }: { t: TFunction }) => {
     i18n.changeLanguage(language);
   };
   const SocialLink = ({ href, src }: SocialLinkProps) => {
-  return (
-  <a
-  href={href}
-  target="_blank"
-  rel="noopener noreferrer"
-  key={src}
-  aria-label={src}
-  >
-  <SvgIcon src={src} width="25px" height="25px" />
-  </a>
-  );
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        key={src}
+        aria-label={src}
+      >
+        <SvgIcon src={src} width="25px" height="25px" />
+      </a>
+    );
   };
 
   return (
@@ -50,68 +50,66 @@ const Footer = ({ t }: { t: TFunction }) => {
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
-              <Language>{t("Bog'lanish")}</Language>
+              <Language>{t("Developers")}</Language>
+              <Chat><a href="https://t.me/behruzzo662">Behruz</a></Chat>
+              <Chat><a href="https://t.me/abdurokhmanovv">Abdurohman</a></Chat>
               <Large to="/">{t("Savollaringiz bormi?")}</Large>
-              <Para>{t(`Biz bilan bog‘laning yoki maktabimiz haqida ma’lumot oling.`)}</Para>
-              <a href="mailto:school269@gmail.com">
-                <Chat>{t(`Biz bilan bog'laning`)}</Chat>
-              </a>
-            </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Ma'lumotlar")}</Title>
-              <Large to="/">{t("Maktabimiz haqida")}</Large>
-              <Large to="/">{t("Maqsad va vazifalar")}</Large>
-              <Large to="/">{t("Yangiliklar")}</Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Empty />
-              <Large to="/">{t("Yordam markazi")}</Large>
-              <Large to="/">{t("O'quvchilar uchun qo'llab-quvvatlash")}</Large>
-            </Col>
-          </Row>
-          <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Empty />
-              <Language>{t("Manzil")}</Language>
-              <Para>Toshkent shahar</Para>
-              <Para>269-sonli maktab</Para>
-              <Para>O'zbekiston</Para>
-            </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Biz haqimizda")}</Title>
-              <Large to="/">{t("Maktab tarixi")}</Large>
-              <Large to="/">{t("Blog")}</Large>
-              <Large to="/">{t("Maktab faoliyati")}</Large>
-              <Large to="/">{t("Madaniyat va qadriyatlar")}</Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Tilni tanlang")}</Label>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("uz")}>
-                  <SvgIcon
-                    src="spain.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                    />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
+          </Col>
+          <Col lg={8} md={8} sm={12} xs={12}>
+            <Title>{t("Ma'lumotlar")}</Title>
+            <Large to="/">{t("Maktabimiz haqida")}</Large>
+            <Large to="/">{t("Maqsad va vazifalar")}</Large>
+            <Large to="/">{t("Yangiliklar")}</Large>
+          </Col>
+          <Col lg={6} md={6} sm={12} xs={12}>
+            <Empty />
+            <Large to="/">{t("Yordam markazi")}</Large>
+            <Large to="/">{t("O'quvchilar uchun qo'llab-quvvatlash")}</Large>
+          </Col>
+        </Row>
+        <Row justify="space-between">
+          <Col lg={10} md={10} sm={12} xs={12}>
+            <Empty />
+            <Language>{t("Manzil")}</Language>
+            <Para>Toshkent shahar</Para>
+            <Para>269-sonli maktab</Para>
+            <Para>O'zbekiston</Para>
+          </Col>
+          <Col lg={8} md={8} sm={12} xs={12}>
+            <Title>{t("Biz haqimizda")}</Title>
+            <Large to="/">{t("Maktab tarixi")}</Large>
+            <Large to="/">{t("Blog")}</Large>
+            <Large to="/">{t("Maktab faoliyati")}</Large>
+            <Large to="/">{t("Madaniyat va qadriyatlar")}</Large>
+          </Col>
+          <Col lg={6} md={6} sm={12} xs={12}>
+            <Label htmlFor="select-lang">{t("Tilni tanlang")}</Label>
+            <LanguageSwitchContainer>
+              <LanguageSwitch onClick={() => handleChange("uz")}>
+                <SvgIcon
+                  src="spain.svg"
+                  aria-label="homepage"
+                  width="30px"
+                  height="30px"
+                />
+              </LanguageSwitch>
+              <LanguageSwitch onClick={() => handleChange("en")}>
+                <SvgIcon
+                  src="united-states.svg"
+                  aria-label="homepage"
+                  width="30px"
+                  height="30px"
+                />
+              </LanguageSwitch>
+            </LanguageSwitchContainer>
 
-            </Col>
-          </Row>
-        </Container>
-      </FooterSection>
+          </Col>
+        </Row>
+      </Container>
+    </FooterSection >
       <Extra>
         <Container border={true}>
-        <Row
+          <Row
             justify="space-between"
             align="middle"
             style={{ paddingTop: "3rem" }}
@@ -145,7 +143,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               />
             </FooterContainer>
           </Row>
-            {/* <FooterContainer>
+          {/* <FooterContainer>
               <Para>&copy; {new Date().getFullYear()} 269-sonli maktab. Barcha huquqlar himoyalangan.</Para>
             </FooterContainer>
           </Row> */}
