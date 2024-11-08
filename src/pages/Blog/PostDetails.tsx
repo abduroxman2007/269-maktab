@@ -46,6 +46,24 @@ const PostDetails: React.FC = () => {
             <div style={{display: "flex", justifyContent: "center", margin: "30px 10%"}}>
                 <p>{post.description}</p>
             </div>
+            <div style={{
+                display: "flex", 
+                justifyContent: "center", 
+                margin: "30px 10%",
+                flexWrap: "wrap",
+                gap: "20px"  // adds space between wrapped items
+            }}>
+                {post.pictures && 
+                   post.pictures.map((item: any, index: number) => (
+                    <img 
+                        key={index}  // added key prop for React list rendering
+                        src={item.img} 
+                        alt={post.title} 
+                        style={{ width: '30%', height: 'auto', border: "5px solid rgb(24, 33, 109)" }} 
+                    />
+                   ))
+                }
+            </div>
             {/* Add more post details here */}
         </div>
     );
